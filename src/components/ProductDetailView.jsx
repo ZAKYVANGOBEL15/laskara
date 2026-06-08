@@ -189,21 +189,21 @@ export default function ProductDetailView({
               </div>
               
               {/* Delivery & Returns Info */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 bg-neutral-50 p-4 text-center">
-                <div className="flex flex-col items-center p-2 border-r border-neutral-200 last:border-0">
+              <div className="grid grid-cols-3 gap-2 bg-neutral-50 p-3 text-center">
+                <div className="flex flex-col items-center p-1 border-r border-neutral-200 last:border-0">
                   <Truck className="w-4 h-4 mb-2 text-neutral-600" />
-                  <span className="text-[9px] tracking-wider uppercase text-neutral-800 font-semibold mb-1">Pengiriman Gratis</span>
-                  <span className="text-[9px] text-neutral-400">Seluruh Indonesia</span>
+                  <span className="text-[8px] md:text-[9px] tracking-wider uppercase text-neutral-800 font-semibold mb-1">Pengiriman Gratis</span>
+                  <span className="text-[8px] md:text-[9px] text-neutral-400">Seluruh Indonesia</span>
                 </div>
-                <div className="flex flex-col items-center p-2 border-r border-neutral-200 last:border-0">
+                <div className="flex flex-col items-center p-1 border-r border-neutral-200 last:border-0">
                   <RotateCcw className="w-4 h-4 mb-2 text-neutral-600" />
-                  <span className="text-[9px] tracking-wider uppercase text-neutral-800 font-semibold mb-1">Retur 30 Hari</span>
-                  <span className="text-[9px] text-neutral-400">Pengembalian tanpa repot</span>
+                  <span className="text-[8px] md:text-[9px] tracking-wider uppercase text-neutral-800 font-semibold mb-1">Retur 30 Hari</span>
+                  <span className="text-[8px] md:text-[9px] text-neutral-400">Pengembalian mudah</span>
                 </div>
-                <div className="flex flex-col items-center p-2 last:border-0">
+                <div className="flex flex-col items-center p-1 last:border-0">
                   <ShieldCheck className="w-4 h-4 mb-2 text-neutral-600" />
-                  <span className="text-[9px] tracking-wider uppercase text-neutral-800 font-semibold mb-1">Garansi Keaslian</span>
-                  <span className="text-[9px] text-neutral-400">100% Produk Laskara</span>
+                  <span className="text-[8px] md:text-[9px] tracking-wider uppercase text-neutral-800 font-semibold mb-1">Garansi Asli</span>
+                  <span className="text-[8px] md:text-[9px] text-neutral-400">100% Laskara</span>
                 </div>
               </div>
             </div>

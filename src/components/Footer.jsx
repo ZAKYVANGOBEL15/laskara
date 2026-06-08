@@ -18,7 +18,7 @@ const FacebookIcon = ({ className }) => (
 export default function Footer({ setSelectedCategory }) {
   return (
     <footer className="bg-black text-neutral-400 border-t border-neutral-900 py-16 text-xs tracking-wider">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
         <div className="space-y-4">
           <span className="font-serif text-lg tracking-mega text-white block">LASKARA</span>
           <p className="text-[11px] leading-relaxed text-neutral-500 font-light max-w-xs">

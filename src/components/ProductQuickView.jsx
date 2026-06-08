@@ -37,7 +37,7 @@ export default function ProductQuickView({
           <img 
             src={quickViewProduct.image} 
             alt={quickViewProduct.name} 
-            className="w-full h-full object-cover max-h-[50vh] md:max-h-[75vh]" 
+            className="w-full h-full object-cover max-h-[35vh] md:max-h-[75vh]" 
           />
         </div>
 

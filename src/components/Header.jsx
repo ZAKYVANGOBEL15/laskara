@@ -1,5 +1,5 @@
-import React from 'react';
-import { Menu, Search, Heart, ShoppingBag } from 'lucide-react';
+import React, { useState } from 'react';
+import { Menu, Search, Heart, ShoppingBag, X } from 'lucide-react';
 
 export default function Header({
   selectedCategory,
@@ -10,6 +10,18 @@ export default function Header({
   wishlist,
   cart
 }) {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const handleMobileNavClick = (category) => {
+    setSelectedCategory(category);
+    setIsMobileMenuOpen(false);
+    // Smooth scroll to catalog
+    const catalogElement = document.getElementById('catalog');
+    if (catalogElement) {
+      catalogElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="sticky top-0 bg-white/80 backdrop-blur-md border-b border-neutral-100 z-40 transition-all duration-300">
       {/* Announcement Bar */}
@@ -33,7 +45,11 @@ export default function Header({
       <div className="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
         {/* Left Menu (Mobile Hamburger / Desktop Links) */}
         <div className="flex items-center gap-6">
-          <button className="md:hidden p-2 text-neutral-800 hover:text-black">
+          <button 
+            onClick={() => setIsMobileMenuOpen(true)}
+            className="md:hidden p-2 text-neutral-800 hover:text-black"
+            aria-label="Buka Menu"
+          >
             <Menu className="w-6 h-6" />
           </button>
           <nav className="hidden md:flex items-center gap-8 text-xs tracking-widest uppercase font-medium">
@@ -106,6 +122,61 @@ export default function Header({
               </span>
             )}
           </button>
+        </div>
+      </div>
+
+      {/* Mobile Navigation Drawer */}
+      <div 
+        className={`fixed inset-0 z-50 md:hidden transition-opacity duration-300 ${
+          isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+      >
+        {/* Backdrop */}
+        <div 
+          onClick={() => setIsMobileMenuOpen(false)}
+          className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+        />
+        {/* Drawer Panel */}
+        <div 
+          className={`absolute left-0 top-0 bottom-0 w-4/5 max-w-sm bg-white shadow-2xl p-6 flex flex-col transform transition-transform duration-300 ease-out ${
+            isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
+          }`}
+        >
+          <div className="flex items-center justify-between pb-6 border-b border-neutral-100">
+            <span className="font-serif text-lg tracking-widest uppercase">MENU</span>
+            <button 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="p-1 hover:rotate-90 transition-transform duration-300"
+              aria-label="Tutup Menu"
+            >
+              <X className="w-6 h-6" />
+            </button>
+          </div>
+          
+          <nav className="flex flex-col gap-6 pt-8 text-sm tracking-widest uppercase font-medium">
+            <button 
+              onClick={() => handleMobileNavClick('All')}
+              className={`text-left py-2 border-b border-neutral-50 transition-colors ${selectedCategory === 'All' ? 'text-black font-semibold' : 'text-neutral-500'}`}
+            >
+              Semua Koleksi
+            </button>
+            <button 
+              onClick={() => handleMobileNavClick('Clothing')}
+              className={`text-left py-2 border-b border-neutral-50 transition-colors ${selectedCategory === 'Clothing' ? 'text-black font-semibold' : 'text-neutral-500'}`}
+            >
+              Busana
+            </button>
+            <button 
+              onClick={() => handleMobileNavClick('Accessories')}
+              className={`text-left py-2 border-b border-neutral-50 transition-colors ${selectedCategory === 'Accessories' ? 'text-black font-semibold' : 'text-neutral-500'}`}
+            >
+              Aksesoris
+            </button>
+          </nav>
+
+          <div className="mt-auto pt-6 border-t border-neutral-100 text-[10px] tracking-widest uppercase text-neutral-400 text-center">
+            <span>© LASKARA ATELIER</span>
+          </div>
         </div>
       </div>
     </header>
