@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, MapPin } from 'lucide-react';
 
 const InstagramIcon = ({ className }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -22,7 +22,7 @@ export default function Footer({ setSelectedCategory }) {
         <div className="space-y-4">
           <span className="font-serif text-lg tracking-mega text-white block">LASKARA</span>
           <p className="text-[11px] leading-relaxed text-neutral-500 font-light max-w-xs">
-            Atelier mode modern dengan fokus pada minimalisme, potongan arsitektural terstruktur, dan kemewahan dalam kesederhanaan.
+            Atelier mode modern berbasis di Kotamobagu dengan fokus pada minimalisme, potongan arsitektural terstruktur, dan kemewahan dalam kesederhanaan.
           </p>
         </div>
         <div>
@@ -46,8 +46,9 @@ export default function Footer({ setSelectedCategory }) {
         <div>
           <h4 className="text-white tracking-widest uppercase font-semibold mb-4">Hubungi Kami</h4>
           <ul className="space-y-2.5">
+            <li className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-neutral-500" /> Kotamobagu, Sulawesi Utara</li>
             <li><a href="mailto:info@laskara.com" className="hover:text-white transition-colors flex items-center gap-1.5"><ExternalLink className="w-3.5 h-3.5" /> info@laskara.com</a></li>
-            <li><a href="tel:+62215551234" className="hover:text-white transition-colors">+62 895402945495</a></li>
+            <li><a href="tel:+62895402945495" className="hover:text-white transition-colors">+62 895-4029-45495</a></li>
             <li className="flex items-center gap-4 pt-3">
               <a href="#" className="hover:text-white transition-colors"><InstagramIcon className="w-4 h-4" /></a>
               <a href="#" className="hover:text-white transition-colors"><FacebookIcon className="w-4 h-4" /></a>
