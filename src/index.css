@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Cormorant Garamond', serif;
+
+  --color-fashion-light: #F9F9F9;
+  --color-fashion-dark: #111111;
+  --color-fashion-gray: #767676;
+  --color-fashion-border: #EAEAEA;
+
+  --letter-spacing-widest: .25em;
+  --letter-spacing-mega: .4em;
+
+  --animate-fade-in: fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-slide-up: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-slide-down: slide-down 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-marquee: marquee 30s linear infinite;
+
+  @keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes slide-up {
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes slide-down {
+    0% { transform: translateY(-20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-fashion-light text-fashion-dark font-sans antialiased overflow-x-hidden;
+  }
+
+  ::selection {
+    background-color: #111111;
+    color: #F9F9F9;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    letter-spacing: 0.05em;
+  }
+}
+
+@utility custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #111111;
+  }
+}
+
+@utility text-outline {
+  -webkit-text-stroke: 1px #111111;
+  color: transparent;
+}
+
+@utility text-outline-white {
+  -webkit-text-stroke: 1px #ffffff;
+  color: transparent;
+}
+
+/* Pulse slow animation */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.4; }
+}
+
+@utility animate-pulse-slow {
+  animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
