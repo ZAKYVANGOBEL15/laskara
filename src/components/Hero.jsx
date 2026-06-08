@@ -8,7 +8,7 @@ export default function Hero({ setSelectedCategory, heroIndex, setHeroIndex }) {
       <div className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${heroIndex === 0 ? 'opacity-100' : 'opacity-0'}`}>
         <div className="absolute inset-0 bg-black/40 z-10" />
         <img 
-          src="/images/blazer.png" 
+          src="images/blazer.png" 
           alt="Noir Collection" 
           className="w-full h-full object-cover object-top scale-105 animate-pulse-slow" 
         />
@@ -32,7 +32,7 @@ export default function Hero({ setSelectedCategory, heroIndex, setHeroIndex }) {
       <div className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${heroIndex === 1 ? 'opacity-100' : 'opacity-0'}`}>
         <div className="absolute inset-0 bg-black/40 z-10" />
         <img 
-          src="/images/dress.png" 
+          src="images/dress.png" 
           alt="Blanc Collection" 
           className="w-full h-full object-cover object-top scale-105 animate-pulse-slow" 
         />
@@ -56,7 +56,7 @@ export default function Hero({ setSelectedCategory, heroIndex, setHeroIndex }) {
       <div className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${heroIndex === 2 ? 'opacity-100' : 'opacity-0'}`}>
         <div className="absolute inset-0 bg-black/40 z-10" />
         <img 
-          src="/images/coat.png" 
+          src="images/coat.png" 
           alt="Minimalist Architecture" 
           className="w-full h-full object-cover object-top scale-105 animate-pulse-slow" 
         />
