@@ -1,16 +1,49 @@
-# React + Vite
+# LASKARA - Minimalist Fashion Store 🖤
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Laskara adalah sebuah prototype website fashion store modern bernuansa minimalist monochrome (hitam-putih) yang dibangun menggunakan React.js dan Tailwind CSS v4. Didesain secara khusus untuk memberikan pengalaman belanja yang bersih, premium, dan elegan layaknya brand fashion kelas atas.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+*Link Live Demo GitHub Pages akan tertera di sini setelah Anda mengaktifkannya.*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Fitur Utama
+*   **Minimalist Monochrome Theme**: Estetika modern dan premium dengan palet warna hitam, abu-abu, dan putih bersih.
+*   **Elegant Typography**: Kombinasi font serif klasik *Cormorant Garamond* dan sans-serif bersih *Inter*.
+*   **Hero Slider Autoplay**: Slider banner utama interaktif dengan transisi fade-in lembut.
+*   **Real-time Search & Filter**: Pencarian produk dan filter kategori instan tanpa reload halaman.
+*   **Interactive Cart & Wishlist Drawer**: Drawer belanja dan favorit yang interaktif dengan perhitungan otomatis.
+*   **Quick View Modal & Product Details**: Pratinjau cepat dan halaman detail lengkap produk dengan pemilih ukuran, warna, serta kuantitas.
+*   **Toast Notifications**: Notifikasi instan dengan z-index tinggi yang menutup otomatis secara berkala.
+*   **Modular Architecture**: Struktur kode modern dengan komponen-komponen terpisah yang bersih di folder `components/`.
 
-## React Compiler
+## 🛠️ Tech Stack
+*   **Core**: React.js 19
+*   **Styling**: Tailwind CSS v4 + `@tailwindcss/vite`
+*   **Icons**: Lucide React
+*   **Build Tool**: Vite 8
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📦 Cara Menjalankan Secara Lokal
 
-## Expanding the ESLint configuration
+1. **Clone repository ini:**
+   ```bash
+   git clone https://github.com/ZAKYVANGOBEL15/laskara.git
+   cd laskara
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. **Instal dependensi:**
+   ```bash
+   npm install
+   ```
+
+3. **Jalankan server pengembangan:**
+   ```bash
+   npm run dev
+   ```
+   Buka browser di `http://localhost:5173` (atau port yang tertera pada terminal).
+
+4. **Build untuk produksi:**
+   ```bash
+   npm run build
+   ```
+
+---
+*Dibuat dengan dedikasi penuh untuk estetika dan performa.*
