@@ -108,13 +108,28 @@ export default function CartDrawer({
             <button 
               id="checkout-btn"
               onClick={() => {
-                showToast('Pembayaran berhasil! Terima kasih telah berbelanja di LASKARA.');
+                let message = "Halo LASKARA Atelier, saya ingin memesan:\n\n";
+                cart.forEach((item, index) => {
+                  message += `${index + 1}. *${item.product.name}*\n`;
+                  message += `   - Ukuran: ${item.size}\n`;
+                  message += `   - Warna: ${item.color.split(' ')[0]}\n`;
+                  message += `   - Kuantitas: ${item.quantity}\n`;
+                  message += `   - Harga: ${formatPrice(item.product.price * item.quantity)}\n\n`;
+                });
+                message += `*Total Pembayaran:* ${formatPrice(cartTotal)}\n\n`;
+                message += "Mohon info untuk kelanjutan proses pembayaran dan pengiriman. Terima kasih!";
+
+                const encodedMessage = encodeURIComponent(message);
+                const waUrl = `https://wa.me/62895402945495?text=${encodedMessage}`;
+                
+                window.open(waUrl, '_blank');
+                showToast('Mengarahkan ke WhatsApp untuk detail pembayaran...');
                 setCart([]);
                 setIsCartOpen(false);
               }}
               className="w-full bg-black text-white py-4 text-xs tracking-widest uppercase font-semibold hover:bg-neutral-800 transition-colors flex items-center justify-center gap-2"
             >
-              Lanjutkan Ke Pembayaran
+              Lanjutkan Ke Pembayaran (WhatsApp)
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>

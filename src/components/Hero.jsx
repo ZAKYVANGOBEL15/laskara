@@ -13,7 +13,7 @@ export default function Hero({ setSelectedCategory, heroIndex, setHeroIndex }) {
           className="w-full h-full object-cover object-top scale-105 animate-pulse-slow" 
         />
         <div className="absolute inset-0 z-20 flex flex-col justify-end p-8 md:p-24 max-w-7xl mx-auto text-white">
-          <span className="text-xs md:text-sm tracking-mega uppercase text-neutral-300 font-semibold mb-3 block">KOLEKSI MUSIM PANAS '26</span>
+          <span className="text-xs md:text-sm tracking-mega uppercase text-neutral-300 font-semibold mb-3 block">KOLEKSI TERBARU '26</span>
           <h2 className="text-4xl md:text-7xl font-serif tracking-wide mb-6 max-w-3xl leading-[1.1]">Estetika Murni dalam Kesederhanaan</h2>
           <p className="text-xs md:text-base text-neutral-300 max-w-md mb-8 leading-relaxed font-light">Menciptakan siluet kontemporer dengan palet hitam & putih terkurasi untuk lemari pakaian modern yang abadi.</p>
           <div>

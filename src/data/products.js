@@ -55,7 +55,7 @@ export const PRODUCTS = [
     price: 2990000,
     image: 'images/coat.png',
     description: 'Mantel wol charcoal dengan desain modern trench. Dilengkapi dengan sabuk pinggang yang elegan untuk siluet yang terdefinisi atau kenakan terbuka untuk gaya kasual yang mengalir.',
-    details: 'Dibuat untuk musim peralihan, mantel wol berat ini menawarkan kehangatan luar biasa. Lapisan double-breasted tersembunyi mempertahankan kesederhanaan estetika minimalis khas Laskara.',
+    details: 'Dirancang untuk kenyamanan ekstra, mantel wol hangat ini menawarkan perlindungan optimal dari udara dingin dengan kelembutan luar biasa. Lapisan double-breasted tersembunyi mempertahankan kesederhanaan estetika minimalis khas Laskara.',
     specs: '80% Wol Merino, 20% Poliamida. Lapisan satin premium. Panjang di bawah lutut.',
     sizing: ['S', 'M', 'L', 'XL'],
     colors: [
